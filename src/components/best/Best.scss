@@ -1,0 +1,17 @@
+.best {
+  padding: 100px 20px;
+  margin: 0 auto;
+
+  &__title {
+    max-width: 450px;
+    font-weight: 400;
+    font-size: 64px;
+    margin: 0 auto;
+  }
+
+  &__show {
+    margin-top: 70px;
+    display: flex;
+    gap: 10px;
+  }
+}

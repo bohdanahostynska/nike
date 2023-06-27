@@ -1,0 +1,29 @@
+.sportstime {
+  margin: 0 auto;
+  padding: 100px 50px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    display: block;
+    max-width: 484px;
+    margin: 0 auto;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  &__img1 {
+    grid-row: span 3;
+  }
+
+  .btn {
+    max-width: 300px;
+    padding: 20px 30px 20px 20px;
+  }
+}
