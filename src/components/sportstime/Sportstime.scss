@@ -1,6 +1,6 @@
 .sportstime {
   margin: 0 auto;
-  padding: 100px 50px;
+  padding: 100px 50px 0;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -13,17 +13,15 @@
 
   &__menu {
     display: grid;
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: repeat(2, 3fr);
     margin-top: 100px;
-    margin-bottom: 100px;
-  }
-
-  &__img1 {
-    grid-row: span 3;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 5;
+    gap: 30px;
   }
 
   .btn {
     max-width: 300px;
-    padding: 20px 30px 20px 20px;
   }
 }

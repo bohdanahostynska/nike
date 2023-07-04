@@ -154,8 +154,9 @@
       border: 1px solid #ffff;
       background-color: #0D0D0E;
       display: inline-block;
-     color: #ffff;
+      color: #ffff;
       font-weight: var(--font-bold);
+      padding: 20px 30px 20px 20px;
     }
 
     @keyframes button-push{

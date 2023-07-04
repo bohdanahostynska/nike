@@ -1,0 +1,37 @@
+.visionaries {
+  padding: 50px;
+
+  &__info {
+    display: flex;
+    gap: 100px;
+  }
+
+  &__img {
+    width: 416px;
+  }
+
+  &__titles {
+    max-width: 472px;
+    display: flex;
+    gap: 5px;
+  }
+  &__title1 {
+    font-weight: 400;
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  &__title2 {
+    font-weight: 400;
+    font-size: 48px;
+    color: #ba0000;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    max-width: 522px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.18px;
+    margin-bottom: 30px;
+  }
+}

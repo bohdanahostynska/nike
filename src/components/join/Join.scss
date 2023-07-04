@@ -1,0 +1,39 @@
+.join {
+  padding: 50px 40px 150px;
+
+  &__main {
+    position: relative;
+    z-index: 14;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 50px 40px;
+  }
+
+  &__img1 {
+    position: absolute;
+    right: 0;
+    max-width: 700px;
+    z-index: 15;
+    top: 35%;
+  }
+  &__logo {
+    position: absolute;
+    left: 75%;
+    max-width: 227px;
+    top: 30%;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 57px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28.77px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,64 @@
+.people {
+  padding: 50px 40px;
+  &__info {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__left {
+    padding-top: 30px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 76.72px;
+    margin-bottom: 50px;
+    max-width: 676px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28.77px;
+    margin-bottom: 50px;
+    max-width: 620px;
+  }
+
+  &__right {
+    display: flex;
+    position: relative;
+    gap: 40px;
+    padding-top: 50px;
+  }
+  &__main__right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__img {
+    position: relative;
+    width: 240px;
+    z-index: 11;
+  }
+
+  &__img1 {
+    position: relative;
+    width: 320px;
+    z-index: 12;
+  }
+
+  &__img2 {
+    position: relative;
+    width: 240px;
+    z-index: 13;
+  }
+
+  &__img3 {
+    position: absolute;
+    max-width: 600px;
+    top: -20%;
+    z-index: 10;
+  }
+}
