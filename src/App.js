@@ -11,6 +11,7 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import People from "./components/people/People";
 import Visionaries from "./components/visionaries/Visionaries";
+import AllItems from "./components/allitems/AllItems";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Join />
       <Contact />
       <Footer />
+      <AllItems />
     </div>
   );
 }
