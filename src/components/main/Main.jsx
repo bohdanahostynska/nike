@@ -27,41 +27,49 @@ const data = [
     id: 1,
     title: "Nike Cosmic Unity 2",
     image: icon1,
+    price:"$87"
   },
   {
     id: 2,
     title: "NIKE SB Dunk High",
     image: icon2,
+    price:"$77"
   },
   {
     id: 3,
     title: "Nike Dark",
     image: icon3,
+    price:"$90"
   },
   {
     id: 4,
     title: "Nike Briliant Dime",
     image: icon4,
+    price:"$68"
   },
   {
     id: 5,
     title: "Nike Night 3",
     image: icon5,
+    price:"$68"
   },
   {
     id: 6,
     title: "Nike Cosmic Unity 3",
     image: icon6,
+    price:"$92"
   },
   {
     id: 7,
-    title: "Nike Space 4",
+    title: "Nike Space basketball sneakers",
     image: icon7,
+    price:"$98"
   },
   {
     id: 8,
-    title: "Nike Star",
+    title: "Nike Air Jordan Footwear",
     image: icon8,
+    price:"$88"
   },
 ];
 
@@ -125,14 +133,19 @@ const Main = () => {
         
        <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-        {data.map(({ id, image, title }) => {
+        {data.map(({ id, image, title ,price}) => {
           return (
             <SwiperSlide className="main__bottom__item" key={id}>
               <div className="main__bottom_info">
+                <div className="main__bottom__data">
                 <div className="main__bottom_thumb">
                   <img src={image} alt="" />
-                </div>
+                </div>        
                 <h3 className="main__bottom__title">{title}</h3>
+                <span className="main__bottom__price">{price}</span>
+           <a href="#" className="main__bottom__button">Buy Now</a>
+
+              </div>
               </div>
             </SwiperSlide>
           );
