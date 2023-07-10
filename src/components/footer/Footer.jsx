@@ -142,10 +142,10 @@ const Footer = () => {
 <img src={logo} alt="" className="footer__left__img" />
           </div>
           <div className="footer__bottom__right">
-          <i className="fa-brands fa-youtube" style={{color:"white"}}></i>
-          <i className="fa-brands fa-facebook"style={{color:"white"}}></i>
-          <i className="fa-brands fa-twitter"style={{color:"white"}}></i>
-          <i className="fa-brands fa-instagram"style={{color:"white"}}></i>
+          <i className="fa-brands fa-youtube"id="youtube" style={{color:"white"}}></i>
+          <i className="fa-brands fa-facebook"id="facebook"style={{color:"white"}}></i>
+          <i className="fa-brands fa-twitter" id="twitter"style={{color:"white"}}></i>
+          <i className="fa-brands fa-instagram" id="instagram"style={{color:"white"}}></i>
           </div>
         </div>
     </div>

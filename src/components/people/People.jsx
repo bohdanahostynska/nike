@@ -35,10 +35,14 @@ their simplicity, supporting your feet with absolute comfort.</p>
         <div className="people__main__left">
           <img src={box} alt="" className="people__img" />
         </div>
-        
+             
         <div className="people__main__right">
+        <div className="people__main__right-top">
           <img src={box1} alt="" className="people__img1" />
+        </div>
+        <div className="people__main__right-bottom">
           <img src={box2} alt="" className="people__img2" />
+        </div>
         </div>
       </div>
     </div>

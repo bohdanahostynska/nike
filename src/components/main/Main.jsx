@@ -12,7 +12,7 @@ import icon4 from "../../assets/main/Product 09 1.svg";
 import icon5 from "../../assets/main/Product 10 1.svg";
 import icon6 from "../../assets/main/Product 11 1.svg";
 import icon7 from "../../assets/main/Product 12 1.svg";
-import icon8 from "../../assets/main/Product 13 1.svg";
+import icon8 from "../../assets/main/img.png";
 import Labels from "../../assets/main/Labels.svg";
 
 import { Navigation } from "swiper";
@@ -49,9 +49,9 @@ const data = [
   },
   {
     id: 5,
-    title: "Nike Night 3",
+    title: "Nike Night Air",
     image: icon5,
-    price:"$68"
+    price:"$62"
   },
   {
     id: 6,
@@ -67,7 +67,7 @@ const data = [
   },
   {
     id: 8,
-    title: "Nike Air Jordan Footwear",
+    title: "Nike Jordan",
     image: icon8,
     price:"$88"
   },

@@ -201,7 +201,12 @@
   &__bottom_info:hover &__bottom__price {
     transform: translateX(-6.8rem);
   }
-
+  &__bottom_info:hover &__bottom__title {
+    transform: translateX(-0.3rem);
+    margin-bottom: 20px;
+    transition-delay: 0.2s;
+    opacity: 1;
+  }
   &__bottom_info:hover &__bottom__button {
     transition-delay: 0.2s;
     opacity: 1;

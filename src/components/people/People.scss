@@ -28,19 +28,210 @@
   &__right {
     display: flex;
     position: relative;
-    gap: 40px;
+    gap: 20px;
     padding-top: 50px;
   }
-  &__main__right {
+
+  &__main__left {
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    background: #191c29;
+    height: 296px;
+    position: relative;
+    border-radius: 6px;
+    align-items: center;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+  }
+  &__main__left:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+  }
+  &__main__left:hover:before,
+  &__main__left:hover:after {
+    animation: none;
+    opacity: 0;
   }
 
-  &__img {
+  &__main__left::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+  }
+
+  &__main__left::after {
+    position: absolute;
+    content: "";
+    top: calc(290px / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(290px / 6));
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: spin 2.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+
+  &__main__right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__main__right-top {
     position: relative;
     width: 240px;
     z-index: 11;
+    background: #191c29;
+    padding: 1px;
+    position: relative;
+    border-radius: 6px;
+    align-items: center;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+  }
+
+  &__main__right-bottom {
+    position: relative;
+    height: 320px;
+    z-index: 15;
+    background: #191c29;
+    padding: 2px;
+    border-radius: 6px;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+  }
+  &__main__right-top:hover,
+  &__main__right-bottom:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+  }
+
+  &__main__right-bottom:hover:before,
+  &__main__right-bottom:hover:after,
+  &__main__right-top:hover:before,
+  &__main__right-top:hover:after {
+    animation: none;
+    opacity: 0;
+  }
+
+  &__main__right-top::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    position: absolute;
+    z-index: -2;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+  }
+  &__main__right-top::after {
+    position: absolute;
+    content: "";
+    top: calc(200px / 6);
+    left: 0;
+    right: 0;
+    z-index: -3;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(100% / 6));
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: spin 2.5s linear infinite;
+  }
+  &__main__right-bottom::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    position: absolute;
+    z-index: -3;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+  }
+  &__main__right-top::after {
+    position: absolute;
+    content: "";
+    top: calc(80px / 6);
+    left: 0;
+    right: 0;
+    z-index: -3;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(100% / 6));
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    opacity: 1;
+    transition: opacity 0.5s;
+    animation: spin 2.5s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
   }
 
   &__img1 {
@@ -59,6 +250,8 @@
     position: absolute;
     max-width: 600px;
     top: -20%;
-    z-index: 10;
+  }
+  &__img {
+    height: 508px;
   }
 }
