@@ -1,27 +1,28 @@
 .sportstime {
-  margin: 0 auto;
-  padding: 100px 50px 0;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-
-  &__image {
-    display: block;
-    max-width: 484px;
     margin: 0 auto;
+    padding: 100px 50px 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  
+    &__image {
+      display: block;
+      max-width: 484px;
+      margin: 0 auto;
+    }
+  
+    &__menu {
+      display: grid;
+      grid-template-columns: repeat(2, 3fr);
+      margin-top: 100px;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 5;
+      gap: 30px;
+    }
+  
+    .btn {
+      max-width: 300px;
+    }
   }
-
-  &__menu {
-    display: grid;
-    grid-template-columns: repeat(2, 3fr);
-    margin-top: 100px;
-    margin-bottom: 40px;
-    position: relative;
-    z-index: 5;
-    gap: 30px;
-  }
-
-  .btn {
-    max-width: 300px;
-  }
-}
+  

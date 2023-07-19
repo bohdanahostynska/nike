@@ -15,6 +15,7 @@ import icon7 from "../../assets/main/Product 12 1.svg";
 import icon8 from "../../assets/main/img.png";
 import Labels from "../../assets/main/Labels.svg";
 
+
 import { Navigation } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -80,7 +81,7 @@ const Main = () => {
       <div className="main__top">
         <div className="main__top__left">
           <img src={Color} alt="" className="main__sideline" />
-          <img src={Image1} alt="main" className="main__image" />
+          <img src={Image1} alt="main" className="main__image"/>
           <img src={Image2} alt="main" className="main__line" />
           <img src={Vector} alt="main" className="main__vector" />
         </div>

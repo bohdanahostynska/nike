@@ -4,6 +4,22 @@
     height: 308px;
   }
 
+  &__image --front {
+    height: 308px;
+  }
+
+  &__image --back {
+    transform: rotateY(180deg);
+  }
+
+  &__image :hover .main__image --front {
+    transform: rotateY(-180deg);
+  }
+
+  &__image :hover .main__image--back {
+    transform: rotateY(0deg);
+  }
+
   &__vector {
     position: absolute;
     top: 20%;
