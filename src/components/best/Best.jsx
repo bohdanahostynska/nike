@@ -12,14 +12,25 @@ const Best = () => {
         <img src={Vector} alt="" className="best__img5" />
       <p className="best__title">BEST SELLERS</p>
       <div className="best__show">
-        <div className="best__women">
+        <div className="snip1573">
           <img src={Women} alt="" className="best__img1" />
+          <figcaption>
+          <h3>WOMEN</h3>
+  </figcaption>
+  
         </div>
-        <div className="best__kids">
+        <div className="snip1573">
         <img src={Kids} alt="" className="best__img2" />
+        <figcaption>
+        <h3>KIDS</h3>
+  </figcaption>
+
         </div>
-        <div className="best__men">
+        <div className="snip1573">
         <img src={Men} alt="" className="best__img3" />
+        <figcaption>
+        <h3>MEN</h3>
+  </figcaption>
         </div>
       </div>
     </div>
