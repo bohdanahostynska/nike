@@ -29,7 +29,6 @@ const Favourite = () => {
           <div className="favourite__item">
            <h3 className="favourite__subtitle">NIKE Mercurial Superfly</h3>
            <div className="favourite__product">
-           <img src={Box} alt="" className="favourite__img1" />
             <img src={Sh1} alt="" className="favourite__img" />
             <span className="favourite price">$271</span>
 
@@ -38,7 +37,6 @@ const Favourite = () => {
           <div className="favourite__item">
            <h3 className="favourite__subtitle">NIKE Air Zoom Alphafly</h3>
            <div className="favourite__product">
-           <img src={Box} alt="" className="favourite__img2" />
             <img src={Sh2} alt="" className="favourite__img" />
             <span className="favourite price">$216</span>
            </div>
@@ -46,7 +44,6 @@ const Favourite = () => {
           <div className="favourite__item">
            <h3 className="favourite__subtitle">NIKE Dunk High</h3>
            <div className="favourite__product">
-           <img src={Box} alt="" className="favourite__img3" />
             <img src={Sh3} alt="" className="favourite__img" />
             <span className="favourite price">$187</span>
            </div>

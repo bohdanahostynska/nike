@@ -5,11 +5,18 @@ import img2 from"../../assets/essence/rec2.svg";
 const Essence = () => {
   return (
     <div className='essence container section'>
-      <h1 className="essence__title">THE ESSENCE
-HANDCRAFTED
-       OF FOOTWEAR.</h1>
-       <img src={img1} alt="" className="essence__img_1" />
-       <img src={img2} alt="" className="essence__img_2" />
+      <div className="essence__title_1">
+      <h1 className="essence__title">THE ESSENCE</h1>
+      <img src={img1} alt="" className="essence__img_1" />
+      </div>
+<h1 className="essence__title">HANDCRAFTED</h1>
+<div className="essence__title_2">
+<img src={img2} alt="" className="essence__img_2" />
+<h1 className="essence__title">OF FOOTWEAR.</h1></div>
+
+
+  
+
        <p className="essence__text">In terms of footwear, we are the first in Canada to have opened not simple "shops" but real company outlets that offer the same service as the artisan shops of yesteryear: this to make you go without fail every time you want to buy a pair of handmade genuine leather shoes. Without fear of making mistakes and with the certainty that you will be able to wear them comfortably from the beginning.
 Are you also curious to find out why hundreds of people choose us every day?
 </p>

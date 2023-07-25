@@ -38,7 +38,7 @@
     gap: 30px;
 
     background: #191c29;
-    height: 296px;
+    height: 50%;
     position: relative;
     border-radius: 6px;
     align-items: center;
@@ -125,7 +125,6 @@
 
   &__main__right-bottom {
     position: relative;
-    height: 320px;
     z-index: 15;
     background: #191c29;
     padding: 2px;
@@ -242,7 +241,7 @@
 
   &__img2 {
     position: relative;
-    width: 240px;
+    height: 100%;
     z-index: 13;
   }
 
@@ -252,6 +251,38 @@
     top: -20%;
   }
   &__img {
-    height: 508px;
+    height: 100%;
   }
+}
+
+@media screen and (max-width: 1024px) {
+  .people {
+    &__info {
+      flex-direction: column;
+    }
+
+    &__title {
+      font-size: 52px;
+      margin-bottom: 0;
+    }
+
+    &__right {
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 856px) {
+  .people {
+    &__right {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 350px) {
 }

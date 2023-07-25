@@ -11,16 +11,67 @@ import icon6 from "../../assets/sportstime/6.svg";
 const SportsTime = () => {
   return (
     <div className='sportstime container section'>
-<img src={title} alt="" className="sportstime__image" />
-<div className="sportstime__menu">
+      <img src={title} alt="" className="sportstime__image" />
+        <div className="cols">
+			<div className="col" ontouchstart="this.classList.toggle('hover');">
+<div className="content">
+<div className="front">
   <img src={icon1} alt="" className="sportstime__img1" />
-  <img src={icon2} alt="" className="sportstime__img2" />
-  <img src={icon3} alt="" className="sportstime__img3" />
-  <img src={icon4} alt="" className="sportstime__img4" />
-  <img src={icon5} alt="" className="sportstime__img5" />
-  <img src={icon6} alt="" className="sportstime__img6" />
 </div>
-<button className="btn">
+<div className="back">
+  <img src={icon1} alt="" className="sportstime__img1" />
+  </div>
+  </div>
+
+  <div className="content">
+  <div className="front">
+  <img src={icon2} alt="" className="sportstime__img2" />
+  </div>
+<div className="back">
+  <img src={icon2} alt="" className="sportstime__img2" />
+  </div>
+  </div>
+
+  <div className="content">
+  <div className="front">
+  <img src={icon3} alt="" className="sportstime__img3" />
+  </div>
+<div className="back">
+  <img src={icon3} alt="" className="sportstime__img3" />
+  </div>
+  </div>
+
+  <div className="content">
+  <div className="front">
+  <img src={icon4} alt="" className="sportstime__img4" />
+  </div>
+<div className="back">
+  <img src={icon4} alt="" className="sportstime__img4" />
+  </div>
+  </div>
+
+  <div className="content">
+  <div className="front">
+  <img src={icon5} alt="" className="sportstime__img5"/>
+  </div>
+<div className="back">
+  <img src={icon5} alt="" className="sportstime__img5" />
+  </div>
+  </div>
+
+  <div className="content">
+  <div className="front">
+  <img src={icon6} alt="" className="sportstime__img6" />
+  </div>
+<div className="back">
+  <img src={icon6} alt="" className="sportstime__img6" />
+  </div>
+  </div>
+     </div>
+
+     
+    </div>
+    <button className="btn">
           Lets Discover More
             <img src="" alt="" className="button-img" />
             <svg

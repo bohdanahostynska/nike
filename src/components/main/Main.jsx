@@ -1,9 +1,6 @@
 import React from "react";
 import Header from "../header/Header";
 import Image1 from "../../assets/main/mainImage.svg";
-import Image2 from "../../assets/main/360.svg";
-import Color from "../../assets/main/Color.svg";
-import Vector from "../../assets/main/Vector 2.svg";
 import vector from "../../assets/main/vector.svg";
 import icon1 from "../../assets/main/Product (1).svg";
 import icon2 from "../../assets/main/Product (2).svg";
@@ -80,10 +77,7 @@ const Main = () => {
       <Header />
       <div className="main__top">
         <div className="main__top__left">
-          <img src={Color} alt="" className="main__sideline" />
           <img src={Image1} alt="main" className="main__image"/>
-          <img src={Image2} alt="main" className="main__line" />
-          <img src={Vector} alt="main" className="main__vector" />
         </div>
         <div className="main__top__right">
           <h2 className="main__title">AIR JORDAN 1 RETRO HIGH OG</h2>
