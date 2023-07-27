@@ -1,34 +1,26 @@
 .header {
-  .nav__menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.875rem;
+
+  &__list__right {
     display: flex;
+    gap: 47.5px;
     justify-content: space-between;
-
-    &__list {
-      display: flex;
-      gap: 23px;
-    }
-
-    &__list__right {
-      display: flex;
-      gap: 47.5px;
-    }
-    .icon-magnifier {
-      color: #fff;
-    }
-    .icon-user {
-      color: #fff;
-    }
-    .icon-bag {
-      color: #fff;
-      margin-top: 5px;
-    }
   }
-  .menu__centre__logo {
+  .icon-magnifier {
+    color: #fff;
+  }
+  .icon-user {
+    color: #fff;
+  }
+  .icon-bag {
+    color: #fff;
+    margin-top: 5px;
+  }
+
+  &__centre__logo {
     width: 80px;
     height: 31.5px;
-  }
-
-  .menu__title {
-    color: #fff;
   }
 }

@@ -117,7 +117,7 @@ const Main = () => {
         className="main__bottom "
         modules={[Navigation]}
         spaceBetween={0}
-        slidesPerView={2}
+        slidesPerView={1}
         loop={true}
         navigation={{
           nextEl: ".swiper-button-next",
@@ -134,7 +134,7 @@ const Main = () => {
               <div className="main__bottom_info">
                 <div className="main__bottom__data">
                 <div className="main__bottom_thumb">
-                  <img src={image} alt="" />
+                  <img src={image} className="swiper-shoe"alt="" />
                 </div>        
                 <h3 className="main__bottom__title">{title}</h3>
                 <span className="main__bottom__price">{price}</span>

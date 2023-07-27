@@ -38,6 +38,7 @@
   .visionaries {
     &__left {
       width: 60%;
+      margin: 0 auto;
     }
   }
 }
@@ -53,6 +54,11 @@
     }
     &__title2 {
       font-size: 52px;
+    }
+
+    .btn {
+      display: flex;
+      margin: 0 auto;
     }
   }
 }

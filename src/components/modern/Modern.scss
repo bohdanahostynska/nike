@@ -7,6 +7,7 @@
   &__left {
     width: 60%;
     position: relative;
+    margin: 0 auto;
   }
 
   &__img1 {
@@ -74,8 +75,17 @@
 
 @media screen and (max-width: 856px) {
   .modern {
+    &__block {
+      display: flex;
+      flex-direction: column-reverse;
+    }
     &__img2 {
       bottom: 50%;
+    }
+
+    .btn {
+      display: flex;
+      margin: 0 auto;
     }
   }
 }

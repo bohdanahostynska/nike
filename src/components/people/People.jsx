@@ -31,7 +31,7 @@ their simplicity, supporting your feet with absolute comfort.</p>
           </button>
       </div>
       <div className="people__right">
-      <img src={Box} alt="" className="people__img3" />
+      {/* <img src={Box} alt="" className="people__img3" /> */}
         <div className="people__main__left">
           <img src={box} alt="" className="people__img" />
         </div>
