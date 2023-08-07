@@ -32,6 +32,7 @@ export default function Product() {
   function add(product) {
     const action = { product, type: 'add' };
     setCart(action);
+
   }
 
   function remove(product) {
@@ -71,7 +72,7 @@ return(
       <p className='product__title'>
       Total items: {cart.length} 
       </p>
-      <p className='product__title'>Total price: {getTotal(cart)} USD</p>
+      <p className='product__title'>Total price: {getTotal(cart)}$</p>
       <div><button className="btn">Checkout</button></div>
       </div>
   </div>

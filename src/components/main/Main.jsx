@@ -25,49 +25,49 @@ export const products = [
     id: 1,
     name: "Nike Cosmic Unity 2",
     image: icon1,
-    price:"$87"
+    price:87
   },
   {
     id: 2,
     name: "NIKE SB Dunk High",
     image: icon2,
-    price:"$77"
+    price:77
   },
   {
     id: 3,
     name: "Nike Dark",
     image: icon3,
-    price:"$90"
+    price:90
   },
   {
     id: 4,
     name: "Nike Briliant Dime",
     image: icon4,
-    price:"$68"
+    price:68
   },
   {
     id: 5,
     name: "Nike Night Air",
     image: icon5,
-    price:"$62"
+    price:62
   },
   {
     id: 6,
     name: "Nike Cosmic Unity 3",
     image: icon6,
-    price:"$92"
+    price:92
   },
   {
     id: 7,
     name: "Nike Space basketball sneakers",
     image: icon7,
-    price:"$98"
+    price:98
   },
   {
     id: 8,
     name: "Nike Jordan",
     image: icon8,
-    price:"$88"
+    price:88
   },
 ];
 
@@ -137,8 +137,8 @@ const Main = () => {
                   <img src={image} className="swiper-shoe"alt="" />
                 </div>        
                 <h3 className="main__bottom__title">{name}</h3>
-                <span className="main__bottom__price">{price}</span>
-           <a href="#" className="main__bottom__button">Buy Now</a>
+                <span className="main__bottom__price">{price}$</span>
+                <button className="main__bottom__button">Buy Now</button>
 
               </div>
               </div>
