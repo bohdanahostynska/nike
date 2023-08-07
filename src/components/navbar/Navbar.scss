@@ -6,7 +6,7 @@
   height: 100px;
   padding: 40px;
 
-  .above {
+  .aside {
     position: fixed;
     top: 0;
     background-color: black;
@@ -54,7 +54,7 @@
     cursor: pointer;
     height: 40px;
     width: 45px;
-    background: hsl(43, 100%, 68%);
+    background: hsl(40, 22%, 39%);
     border: 1px solid #474448;
     display: none;
     justify-content: center;
@@ -65,7 +65,7 @@
 }
 
 @media screen and (max-width: 1350px) {
-  .above {
+  .aside {
     width: 100vw;
     height: 10vh;
   }
@@ -73,7 +73,7 @@
 
 @media screen and (max-width: 1024px) {
   .nav {
-    .above {
+    .aside {
       top: -10vh;
     }
 

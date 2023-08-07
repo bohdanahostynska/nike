@@ -20,52 +20,52 @@ import "swiper/css/navigation";
 import "swiper/css";
 
 
-const data = [
+export const products = [
   {
     id: 1,
-    title: "Nike Cosmic Unity 2",
+    name: "Nike Cosmic Unity 2",
     image: icon1,
     price:"$87"
   },
   {
     id: 2,
-    title: "NIKE SB Dunk High",
+    name: "NIKE SB Dunk High",
     image: icon2,
     price:"$77"
   },
   {
     id: 3,
-    title: "Nike Dark",
+    name: "Nike Dark",
     image: icon3,
     price:"$90"
   },
   {
     id: 4,
-    title: "Nike Briliant Dime",
+    name: "Nike Briliant Dime",
     image: icon4,
     price:"$68"
   },
   {
     id: 5,
-    title: "Nike Night Air",
+    name: "Nike Night Air",
     image: icon5,
     price:"$62"
   },
   {
     id: 6,
-    title: "Nike Cosmic Unity 3",
+    name: "Nike Cosmic Unity 3",
     image: icon6,
     price:"$92"
   },
   {
     id: 7,
-    title: "Nike Space basketball sneakers",
+    name: "Nike Space basketball sneakers",
     image: icon7,
     price:"$98"
   },
   {
     id: 8,
-    title: "Nike Jordan",
+    name: "Nike Jordan",
     image: icon8,
     price:"$88"
   },
@@ -128,7 +128,7 @@ const Main = () => {
         
        <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-        {data.map(({ id, image, title ,price}) => {
+        {products.map(({ id, image, name ,price}) => {
           return (
             <SwiperSlide className="main__bottom__item" key={id}>
               <div className="main__bottom_info">
@@ -136,7 +136,7 @@ const Main = () => {
                 <div className="main__bottom_thumb">
                   <img src={image} className="swiper-shoe"alt="" />
                 </div>        
-                <h3 className="main__bottom__title">{title}</h3>
+                <h3 className="main__bottom__title">{name}</h3>
                 <span className="main__bottom__price">{price}</span>
            <a href="#" className="main__bottom__button">Buy Now</a>
 

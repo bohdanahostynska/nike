@@ -6,7 +6,7 @@ function Navbar() {
   return (
     
     
-    <><above className={toggle ? "above show-menu" : "above"}>
+    <><aside className={toggle ? "aside show-menu" : "aside"}>
           <div className="nav">
               <nav className="nav__menu">
                   <ul className="nav__list">
@@ -35,7 +35,9 @@ function Navbar() {
 
               </nav>
           </div>
-      </above><div className={toggle ? "nav__toggle nav__toggle-open" : "nav__toggle"} onClick={() => showMenu(!toggle)}>
+      </aside>
+      
+      <div className={toggle ? "nav__toggle nav__toggle-open" : "nav__toggle"} onClick={() => showMenu(!toggle)}>
               <i className="icon-menu"></i>
           </div></>
  
