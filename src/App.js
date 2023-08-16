@@ -12,7 +12,7 @@ import Footer from "./components/footer/Footer";
 import People from "./components/people/People";
 import Visionaries from "./components/visionaries/Visionaries";
 import Navbar from "./components/navbar/Navbar";
-import ProductCart from "./components/cart/ProductCart";
+import ProductCart from "./components/productCart/ProductCart";
 
 function App() {
   return (

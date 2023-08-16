@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import Header from "../header/Header";
 import Image1 from "../../assets/main/mainImage.svg";
 import vector from "../../assets/main/vector.svg";
@@ -72,6 +72,47 @@ export const products = [
 ];
 
 const Main = () => {
+
+  const [cartItems, setCartItems] = useState([]);
+  // const [cart, setCart] = useState([]);
+
+  const addItemToCart = (id,product) => {
+
+    setCartItems([...cartItems, product]);
+    console.log(id);
+  
+    // const existingItem = cart.find(item => item.product.id === product.id);
+
+    // if (existingItem) {
+    //   // If the item is already in the cart, update its quantity
+    //   const updatedCart = cart.map(item =>
+    //     item.product.id === product.id
+    //       ? { ...item, quantity: item.quantity + 1 }
+    //       : item
+    //   );
+    //   setCart(updatedCart);
+    // } else {
+    //   // If the item is not in the cart, add it
+    //   const newItem = { product, quantity: 1 };
+    //   setCart([...cart, newItem]);
+    // }
+    // const existingItem = cartItems.find(item => item.product.id === product.id);
+
+    // if (existingItem) {
+    //   // If the item is already in the cart, update its quantity
+    //   const updatedCart = cartItems.map(item =>
+    //     item.product.id === product.id
+    //       ? { ...item, quantity: item.quantity + 1 }
+    //       : item
+    //   );
+    //   setCartItems(updatedCart);
+    // } else {
+    //   // If the item is not in the cart, add it
+    //   const newItem = { product, quantity: 1 };
+    //   setCartItems([...cartItems, newItem]);
+    // }
+  };
+
   return (
     <section className="main container section">
       <Header />
@@ -128,7 +169,8 @@ const Main = () => {
         
        <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-        {products.map(({ id, image, name ,price}) => {
+        {products.map(product =>{
+          const { id,name, image,price } = product;
           return (
             <SwiperSlide className="main__bottom__item" key={id}>
               <div className="main__bottom_info">
@@ -138,7 +180,7 @@ const Main = () => {
                 </div>        
                 <h3 className="main__bottom__title">{name}</h3>
                 <span className="main__bottom__price">{price}$</span>
-                <button className="main__bottom__button">Buy Now</button>
+                <button className="main__bottom__button"onClick={() => addItemToCart(product)}>Buy Now</button>
 
               </div>
               </div>
@@ -146,6 +188,16 @@ const Main = () => {
           );
         })}
       </Swiper>
+      <div>
+        <h2>Cart</h2>
+        {/* <ul>
+          {cartItems.map(item => (
+            <li key={item.product.id}>
+              {item.product.name} - Quantity: {item.quantity}
+            </li>
+          ))}
+        </ul> */}
+      </div>
       <div className="main__background"><img src={Labels} alt="" /></div>
     </section>
   );

@@ -2,8 +2,9 @@ import { useState, useReducer } from "react";
 
 const useStatesHooks = () => {
   const [cart, setCart] = useReducer(cartReducer, []);
+  const [cartItems, setCartItems] = useState([]);
   const [data, setData] = useState([]);
-  return { cart, data, setCart, setData };
+  return { cart, data, setCart, setData, cartItems, setCartItems };
 };
 
 function cartReducer(state, action) {
