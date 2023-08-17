@@ -72,45 +72,23 @@ export const products = [
 ];
 
 const Main = () => {
-
-  const [cartItems, setCartItems] = useState([]);
-  // const [cart, setCart] = useState([]);
-
-  const addItemToCart = (id,product) => {
-
-    setCartItems([...cartItems, product]);
-    console.log(id);
-  
-    // const existingItem = cart.find(item => item.product.id === product.id);
-
-    // if (existingItem) {
-    //   // If the item is already in the cart, update its quantity
-    //   const updatedCart = cart.map(item =>
-    //     item.product.id === product.id
-    //       ? { ...item, quantity: item.quantity + 1 }
-    //       : item
-    //   );
-    //   setCart(updatedCart);
-    // } else {
-    //   // If the item is not in the cart, add it
-    //   const newItem = { product, quantity: 1 };
-    //   setCart([...cart, newItem]);
-    // }
-    // const existingItem = cartItems.find(item => item.product.id === product.id);
-
-    // if (existingItem) {
-    //   // If the item is already in the cart, update its quantity
-    //   const updatedCart = cartItems.map(item =>
-    //     item.product.id === product.id
-    //       ? { ...item, quantity: item.quantity + 1 }
-    //       : item
-    //   );
-    //   setCartItems(updatedCart);
-    // } else {
-    //   // If the item is not in the cart, add it
-    //   const newItem = { product, quantity: 1 };
-    //   setCartItems([...cartItems, newItem]);
-    // }
+  const [cart, setCart] = useState([]);
+  const addItemToCart = (product) => {
+    
+     setCart([...cart, product]);
+     console.log(product);
+    const existingItem = cart.find(item => item.product.id === product.id);
+    if (existingItem) {
+      const updatedCart = cart.map(item =>
+        item.product.id === product.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+      setCart(updatedCart);
+    } else {
+      const newItem = { product, quantity: 1 };
+      setCart([...cart, newItem]);
+    }
   };
 
   return (
@@ -188,16 +166,29 @@ const Main = () => {
           );
         })}
       </Swiper>
-      <div>
-        <h2>Cart</h2>
-        {/* <ul>
-          {cartItems.map(item => (
-            <li key={item.product.id}>
-              {item.product.name} - Quantity: {item.quantity}
+
+    <div className="main__cart">
+    <div className='main__content'>
+  
+    <div className="main__purchase">
+        <ul className="main__ul">
+          {cart.map(item => (
+            <li className="main__li" key={item.product.id}>
+              <div className="main__cart__left">
+              <img src={item.product.image} className="main_cart_img"alt="" /></div>
+              <div className="main__cart__right">
+              <p className="main__price">{item.product.price}$</p>
+</div>
+              - Quantity: {item.quantity}
             </li>
           ))}
-        </ul> */}
+        </ul>
+      <div></div>
       </div>
+      <button className="btn">Checkout</button>
+      </div>
+  </div>
+
       <div className="main__background"><img src={Labels} alt="" /></div>
     </section>
   );
