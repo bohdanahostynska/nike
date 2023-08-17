@@ -73,8 +73,8 @@ export const products = [
 
 const Main = () => {
   const [cart, setCart] = useState([]);
+
   const addItemToCart = (product) => {
-    
      setCart([...cart, product]);
      console.log(product);
     const existingItem = cart.find(item => item.product.id === product.id);
@@ -89,6 +89,21 @@ const Main = () => {
       const newItem = { product, quantity: 1 };
       setCart([...cart, newItem]);
     }
+  };
+  const removeFromCart = (product) => {
+    // const updatedCartItem = cart.filter(item => item.product.id !== product.id)
+    const updatedCartItem = cart.map(item => {
+      if (item.product.id === product.id) {
+        return {
+          ...item,
+          quantity: item.quantity - 1
+        };
+      }
+      return item;
+    }).filter(item => item.quantity > 0);
+
+    // setCartItems(updatedCart);
+    setCart(updatedCartItem);
   };
 
   return (
@@ -169,7 +184,6 @@ const Main = () => {
 
     <div className="main__cart">
     <div className='main__content'>
-  
     <div className="main__purchase">
         <ul className="main__ul">
           {cart.map(item => (
@@ -179,13 +193,14 @@ const Main = () => {
               <div className="main__cart__right">
               <p className="main__price">{item.product.price}$</p>
 </div>
-              - Quantity: {item.quantity}
+<h2 className="main__cart__title"> - {item.quantity}</h2>
+<button onClick={() => removeFromCart(item.product)}>Remove</button>
             </li>
           ))}
         </ul>
       <div></div>
       </div>
-      <button className="btn">Checkout</button>
+      <button className="main__cart__btn">Checkout</button>
       </div>
   </div>
 
