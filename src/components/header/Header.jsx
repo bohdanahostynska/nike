@@ -1,7 +1,16 @@
-import React from 'react';
-import Logo from "../../assets/main/Logo.svg"
+import React,{useState} from 'react';
+import Logo from "../../assets/main/Logo.svg";
+
+
 
 const Header = () => {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
+
   return (
           <section className="header container section">
       <div className="header__centre">
@@ -22,7 +31,7 @@ const Header = () => {
         </li>
 
         <li className="header__icon">
-          <a href="#bag" className="header__link">
+          <a href="#bag" className="header__link"onClick={toggleCart}>{isCartOpen ? 'Close Cart' : 'Open Cart'}
           <i className="icon-bag"></i>
           </a>
         </li>

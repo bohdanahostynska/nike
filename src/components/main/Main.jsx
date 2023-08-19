@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Header from "../header/Header";
 import Image1 from "../../assets/main/mainImage.svg";
 import vector from "../../assets/main/vector.svg";
@@ -10,8 +10,13 @@ import icon5 from "../../assets/main/Product 10 1.svg";
 import icon6 from "../../assets/main/Product 11 1.svg";
 import icon7 from "../../assets/main/Product 12 1.svg";
 import icon8 from "../../assets/main/img.png";
+import icon9 from "../../assets/fav/sh1.svg";
+import icon10 from "../../assets/main/mainImage.svg";
+import icon11 from "../../assets/fav/sh3.svg";
+import icon12 from "../../assets/main/png.png";
+import icon13 from "../../assets/main/png1.png";
 import Labels from "../../assets/main/Labels.svg";
-
+import Logo from "../../assets/main/Logo.svg";
 
 import { Navigation } from "swiper";
 
@@ -19,67 +24,101 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css";
 
-
 export const products = [
   {
     id: 1,
     name: "Nike Cosmic Unity 2",
     image: icon1,
-    price:87
+    price: 87,
   },
   {
     id: 2,
     name: "NIKE SB Dunk High",
     image: icon2,
-    price:77
+    price: 77,
   },
   {
     id: 3,
     name: "Nike Dark",
     image: icon3,
-    price:90
+    price: 90,
   },
   {
     id: 4,
     name: "Nike Briliant Dime",
     image: icon4,
-    price:68
+    price: 68,
   },
   {
     id: 5,
     name: "Nike Night Air",
     image: icon5,
-    price:62
+    price: 62,
   },
   {
     id: 6,
     name: "Nike Cosmic Unity 3",
     image: icon6,
-    price:92
+    price: 92,
   },
   {
     id: 7,
     name: "Nike Space basketball sneakers",
     image: icon7,
-    price:98
+    price: 98,
   },
   {
     id: 8,
     name: "Nike Jordan",
     image: icon8,
-    price:88
+    price: 88,
+  },
+  {
+    id: 9,
+    name: "NIKE Mercurial Superfly",
+    image: icon9,
+    price: 81,
+  },
+  {
+    id: 10,
+    name: "NIKE Air Zoom Alphafly",
+    image: icon10,
+    price: 56,
+  },
+  {
+    id: 11,
+    name: "NIKE Dunk High",
+    image: icon11,
+    price: 78,
+  },
+  {
+    id: 12,
+    name: "NIKE  High",
+    image: icon12,
+    price: 59,
+  },
+  {
+    id: 13,
+    name: "Nike Air Max ",
+    image: icon13,
+    price: 59,
   },
 ];
 
 const Main = () => {
   const [cart, setCart] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
 
   const addItemToCart = (product) => {
-     setCart([...cart, product]);
-     console.log(product);
-    const existingItem = cart.find(item => item.product.id === product.id);
+    setCart([...cart, product]);
+    console.log(product);
+    const existingItem = cart.find((item) => item.product.id === product.id);
     if (existingItem) {
-      const updatedCart = cart.map(item =>
+      const updatedCart = cart.map((item) =>
         item.product.id === product.id
           ? { ...item, quantity: item.quantity + 1 }
           : item
@@ -91,27 +130,66 @@ const Main = () => {
     }
   };
   const removeFromCart = (product) => {
-    // const updatedCartItem = cart.filter(item => item.product.id !== product.id)
-    const updatedCartItem = cart.map(item => {
-      if (item.product.id === product.id) {
-        return {
-          ...item,
-          quantity: item.quantity - 1
-        };
-      }
-      return item;
-    }).filter(item => item.quantity > 0);
-
-    // setCartItems(updatedCart);
+    const updatedCartItem = cart
+      .map((item) => {
+        if (item.product.id === product.id) {
+          return {
+            ...item,
+            quantity: item.quantity - 1,
+          };
+        }
+        return item;
+      })
+      .filter((item) => item.quantity > 0);
     setCart(updatedCartItem);
+  };
+
+  const calculateProductPrice = (product) => {
+    const updateItemPrice = cart.find((item) => item.product.id === product.id);
+    return updateItemPrice
+      ? updateItemPrice.product.price * updateItemPrice.quantity
+      : 0;
+  };
+
+  const calculateTotalPrice = () => {
+    return cart.reduce(
+      (total, item) => total + item.product.price * item.quantity,
+      0
+    );
   };
 
   return (
     <section className="main container section">
-      <Header />
+      <div className="header container section">
+        <div className="header__centre">
+          <img src={Logo} alt="logo" className="header__centre__logo" />
+        </div>
+        <div className="header__right">
+          <ul className="header__list__right">
+            <li className="header__icon">
+              <a href="#search" className="header__link">
+                <i className="icon-magnifier"></i>
+              </a>
+            </li>
+
+            <li className="header__icon">
+              <a href="#user" className="header__link">
+                <i className="icon-user"></i>
+              </a>
+            </li>
+
+            <li className="header__icon">
+              <a href="#bag" className="header__link" onClick={toggleCart}>
+                {isCartOpen ? "" : ""}
+                <i className="icon-bag"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div className="main__top">
         <div className="main__top__left">
-          <img src={Image1} alt="main" className="main__image"/>
+          <img src={Image1} alt="main" className="main__image" />
         </div>
         <div className="main__top__right">
           <h2 className="main__title">AIR JORDAN 1 RETRO HIGH OG</h2>
@@ -159,52 +237,85 @@ const Main = () => {
         }}
         grabCursor={true}
       >
-        
-       <div class="swiper-button-prev"></div>
+        <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-        {products.map(product =>{
-          const { id,name, image,price } = product;
+        {products.map((product) => {
+          const { id, name, image, price } = product;
           return (
             <SwiperSlide className="main__bottom__item" key={id}>
               <div className="main__bottom_info">
                 <div className="main__bottom__data">
-                <div className="main__bottom_thumb">
-                  <img src={image} className="swiper-shoe"alt="" />
-                </div>        
-                <h3 className="main__bottom__title">{name}</h3>
-                <span className="main__bottom__price">{price}$</span>
-                <button className="main__bottom__button"onClick={() => addItemToCart(product)}>Buy Now</button>
-
-              </div>
+                  <div className="main__bottom_thumb">
+                    <img src={image} className="swiper-shoe" alt="" />
+                  </div>
+                  <h3 className="main__bottom__title">{name}</h3>
+                  <span className="main__bottom__price">{price}$</span>
+                  <button
+                    className="main__bottom__button"
+                    onClick={() => addItemToCart(product)}
+                  >
+                    Buy Now
+                  </button>
+                </div>
               </div>
             </SwiperSlide>
           );
         })}
       </Swiper>
+      {isCartOpen && (
+        <div className="main__cart">
+          <div className="main__content">
+            <div className="main__purchase">
+              <button className="main__cart__btn" onClick={toggleCart}>
+                Checkout
+              </button>
+              <ul className="main__ul">
+                {cart.map((item) => (
+                  <li className="main__li" key={item.product.id}>
+                    <div className="main__cart__left">
+                      <img
+                        src={item.product.image}
+                        className="main__cart__img"
+                        alt=""
+                      />
+                    </div>
+                    <div className="main__cart__right">
+                      <span className="main__cart__title">
+                        ${calculateProductPrice(item.product)}
+                      </span>
+                    </div>
+                    <button
+                      className="main__cart__button"
+                      onClick={() => removeFromCart(item.product)}
+                    >
+                      -
+                    </button>
 
-    <div className="main__cart">
-    <div className='main__content'>
-    <div className="main__purchase">
-        <ul className="main__ul">
-          {cart.map(item => (
-            <li className="main__li" key={item.product.id}>
-              <div className="main__cart__left">
-              <img src={item.product.image} className="main_cart_img"alt="" /></div>
-              <div className="main__cart__right">
-              <p className="main__price">{item.product.price}$</p>
-</div>
-<h2 className="main__cart__title"> - {item.quantity}</h2>
-<button onClick={() => removeFromCart(item.product)}>Remove</button>
-            </li>
-          ))}
-        </ul>
-      <div></div>
-      </div>
-      <button className="main__cart__btn">Checkout</button>
-      </div>
-  </div>
+                    <span className="main__cart__number"> {item.quantity}</span>
+                    <button
+                      className="main__cart__button"
+                      onClick={() => addItemToCart(item.product)}
+                    >
+                      +
+                    </button>
+                  </li>
+                ))}
+              </ul>
+              <div>
+                <br/>
+                <br/>
+                <span className="main__cart__title">
+                  Total Price: ${calculateTotalPrice(products)}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
-      <div className="main__background"><img src={Labels} alt="" /></div>
+      <div className="main__background">
+        <img src={Labels} alt="" />
+      </div>
     </section>
   );
 };
