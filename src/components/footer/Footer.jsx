@@ -53,8 +53,6 @@ const Footer = () => {
 
         <div className="footer__main">
           <div className="footer__main__left">
-            <h3 className="footer__title">Let’s stay in touch</h3>
-            <form action="" className="footer form"></form>
             <img src={Logo} alt="" className="footer__bottom__img" />
           </div>
 

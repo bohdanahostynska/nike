@@ -1,0 +1,37 @@
+.form {
+  position: fixed;
+  width: 500px;
+  height: 600px;
+  left: 5%;
+  top: 10%;
+  z-index: 22;
+  background-color: black;
+
+  &__content {
+    margin: 0 auto;
+    max-width: 400px;
+    align-items: flex-start;
+  }
+  .name {
+    color: white;
+    margin-top: 20px;
+    text-align: start;
+  }
+  .email {
+    color: white;
+    margin-top: 20px;
+    text-align: start;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    max-width: 300px;
+    margin-top: 20px;
+  }
+  .btn {
+    padding: 15px;
+  }
+}

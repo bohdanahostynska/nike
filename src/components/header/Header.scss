@@ -8,6 +8,10 @@
     gap: 47.5px;
     justify-content: space-between;
   }
+  &__btn {
+    z-index: 23;
+    background-color: transparent;
+  }
   .icon-magnifier {
     color: #fff;
   }

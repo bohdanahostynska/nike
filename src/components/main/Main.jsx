@@ -1,113 +1,24 @@
 import React, { useState } from "react";
-import Header from "../header/Header";
-import Image1 from "../../assets/main/mainImage.svg";
-import vector from "../../assets/main/vector.svg";
-import icon1 from "../../assets/main/Product (1).svg";
-import icon2 from "../../assets/main/Product (2).svg";
-import icon3 from "../../assets/main/Product 08 1.svg";
-import icon4 from "../../assets/main/Product 09 1.svg";
-import icon5 from "../../assets/main/Product 10 1.svg";
-import icon6 from "../../assets/main/Product 11 1.svg";
-import icon7 from "../../assets/main/Product 12 1.svg";
-import icon8 from "../../assets/main/img.png";
-import icon9 from "../../assets/fav/sh1.svg";
-import icon10 from "../../assets/main/mainImage.svg";
-import icon11 from "../../assets/fav/sh3.svg";
-import icon12 from "../../assets/main/png.png";
-import icon13 from "../../assets/main/png1.png";
-import Labels from "../../assets/main/Labels.svg";
-import Logo from "../../assets/main/Logo.svg";
-
+import { products } from "./MainData";
 import { Navigation } from "swiper";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
 import "swiper/css";
+import Labels from "../../assets/main/Labels.svg";
+import Image1 from "../../assets/main/mainImage.svg";
+import Logo from "../../assets/main/Logo.svg";
+import Form from "../form/Form";
 
-export const products = [
-  {
-    id: 1,
-    name: "Nike Cosmic Unity 2",
-    image: icon1,
-    price: 87,
-  },
-  {
-    id: 2,
-    name: "NIKE SB Dunk High",
-    image: icon2,
-    price: 77,
-  },
-  {
-    id: 3,
-    name: "Nike Dark",
-    image: icon3,
-    price: 90,
-  },
-  {
-    id: 4,
-    name: "Nike Briliant Dime",
-    image: icon4,
-    price: 68,
-  },
-  {
-    id: 5,
-    name: "Nike Night Air",
-    image: icon5,
-    price: 62,
-  },
-  {
-    id: 6,
-    name: "Nike Cosmic Unity 3",
-    image: icon6,
-    price: 92,
-  },
-  {
-    id: 7,
-    name: "Nike Space basketball sneakers",
-    image: icon7,
-    price: 98,
-  },
-  {
-    id: 8,
-    name: "Nike Jordan",
-    image: icon8,
-    price: 88,
-  },
-  {
-    id: 9,
-    name: "NIKE Mercurial Superfly",
-    image: icon9,
-    price: 81,
-  },
-  {
-    id: 10,
-    name: "NIKE Air Zoom Alphafly",
-    image: icon10,
-    price: 56,
-  },
-  {
-    id: 11,
-    name: "NIKE Dunk High",
-    image: icon11,
-    price: 78,
-  },
-  {
-    id: 12,
-    name: "NIKE  High",
-    image: icon12,
-    price: 59,
-  },
-  {
-    id: 13,
-    name: "Nike Air Max ",
-    image: icon13,
-    price: 59,
-  },
-];
+
 
 const Main = () => {
-  const [cart, setCart] = useState([]);
+  const [cart,setCart]=useState([])
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const toggleForm = () => {
+    setIsFormOpen(!isFormOpen);
+  };
 
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
@@ -174,38 +85,28 @@ const Main = () => {
 
             <li className="header__icon">
               <a href="#user" className="header__link">
-                <i className="icon-user"></i>
+                <button className="header__btn"onClick={toggleForm}>
+                {isFormOpen ? "" : <Form/>}
+                <i className="icon-user"></i></button>
               </a>
             </li>
 
             <li className="header__icon">
               <a href="#bag" className="header__link" onClick={toggleCart}>
-                {isCartOpen ? "" : ""}
+                {isCartOpen ? "" :""}
                 <i className="icon-bag"></i>
               </a>
             </li>
           </ul>
         </div>
       </div>
+
       <div className="main__top">
         <div className="main__top__left">
           <img src={Image1} alt="main" className="main__image" />
         </div>
         <div className="main__top__right">
           <h2 className="main__title">AIR JORDAN 1 RETRO HIGH OG</h2>
-          <div className="main__info">
-            <p className="main__price">$275</p>
-            <div className="main__menu">
-              <p className="main__size">Size</p>
-              <div className="main__drop__down">
-                <span className="main__number">39</span>
-                <span className="main__number-1">40</span>
-                <span className="main__number-2">41</span>
-              </div>
-              <img src={vector} alt="" className="icon-arrow-down" />
-              <i className="icon-bag"></i>
-            </div>
-          </div>
           <button className="btn">
             More Details
             <img src="" alt="" className="button-img" />
@@ -272,6 +173,7 @@ const Main = () => {
               <ul className="main__ul">
                 {cart.map((item) => (
                   <li className="main__li" key={item.product.id}>
+                    <div className="main__cart__top">
                     <div className="main__cart__left">
                       <img
                         src={item.product.image}
@@ -280,10 +182,16 @@ const Main = () => {
                       />
                     </div>
                     <div className="main__cart__right">
-                      <span className="main__cart__title">
+                      <p className="main__cart__title">{item.product.name}</p>
+                    </div>
+                    </div>
+                    <br/>
+                <br/>
+                    <div className="main__cart__bottom">
+                    <span className="main__cart__title">
                         ${calculateProductPrice(item.product)}
                       </span>
-                    </div>
+
                     <button
                       className="main__cart__button"
                       onClick={() => removeFromCart(item.product)}
@@ -298,6 +206,7 @@ const Main = () => {
                     >
                       +
                     </button>
+                    </div>
                   </li>
                 ))}
               </ul>
