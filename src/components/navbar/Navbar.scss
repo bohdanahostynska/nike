@@ -5,6 +5,7 @@
   justify-content: space-between;
   height: 100px;
   padding: 40px;
+  position: relative;
 
   .aside {
     position: fixed;
@@ -26,6 +27,8 @@
     display: flex;
     justify-content: space-between;
     gap: 100px;
+    width: 1000px;
+    background-color: aliceblue;
   }
   &__menu {
     display: flex;
@@ -38,9 +41,30 @@
     font-weight: var(--font-bold);
     transition: 0.3s;
   }
+  &__li {
+    max-width: 300px;
+    background-color: aqua;
+    color: black;
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    left: 0;
+  }
+  .menu__price {
+    color: white;
+  }
 
+  .menu__img {
+    width: 100px;
+    height: 70px;
+  }
   &__title {
     font-size: 24px;
+    color: rgb(24, 102, 170);
   }
 
   &__link:hover {
