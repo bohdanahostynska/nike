@@ -70,6 +70,7 @@ export const list = [
     name: "Nike Cosmic Unity 2",
     image: Image1,
     price: 87,
+ 
   },
   {
     id: 2,

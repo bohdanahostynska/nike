@@ -11,12 +11,12 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import People from "./components/people/People";
 import Visionaries from "./components/visionaries/Visionaries";
-import Navbar from "./components/navbar/Navbar";
+import AllItems from "./components/allitems/AllItems";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <AllItems />
       <Main />
       <Essence />
       <Best />

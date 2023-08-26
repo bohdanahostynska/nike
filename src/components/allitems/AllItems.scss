@@ -24,11 +24,8 @@
   }
 
   &__list {
-    display: flex;
-    justify-content: space-between;
-    gap: 100px;
-    width: 1000px;
-    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(4, 15fr);
   }
   &__menu {
     display: flex;
@@ -46,6 +43,14 @@
     background-color: aqua;
     color: black;
   }
+  .but {
+    margin-right: 30px;
+  }
+  .menu__list {
+    display: flex;
+    gap: 100px;
+    justify-content: space-around;
+  }
   .menu {
     display: grid;
     grid-template-columns: repeat(4, 4fr);
@@ -58,9 +63,15 @@
     color: white;
   }
 
-  .menu__img {
+  .menu__image {
     width: 100px;
     height: 70px;
+    background-color: black;
+  }
+
+  .menu__item {
+    width: 200px;
+    height: 100px;
   }
   &__title {
     font-size: 24px;
