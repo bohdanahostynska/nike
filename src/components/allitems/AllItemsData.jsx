@@ -1,70 +1,70 @@
-import Image1 from "../../assets/navbar/png01.png";
-import Image2 from "../../assets/navbar/png02.png";
-import Image3 from "../../assets/navbar/png03.png";
-import Image4 from "../../assets/navbar/png04.png";
-import Image5 from "../../assets/navbar/png05.png";
-import Image6 from "../../assets/navbar/png06.png";
-import Image7 from "../../assets/navbar/png07.png";
-import Image8 from "../../assets/navbar/png08.png";
-import Image9 from "../../assets/navbar/png09.png";
-import Image10 from "../../assets/navbar/png010.png";
-import Image11 from "../../assets/navbar/png011.png";
-import Image12 from "../../assets/navbar/png012.png";
-import Image13 from "../../assets/navbar/png013.png";
-import Image14 from "../../assets/navbar/png014.png";
-import Image15 from "../../assets/navbar/png015.png";
-import Image16 from "../../assets/navbar/png017.png";
-import Image17 from "../../assets/navbar/png017.png";
-import Image18 from "../../assets/navbar/png018.png";
-import Image19 from "../../assets/navbar/png019.png";
-import Image20 from "../../assets/navbar/png020.png";
-import Image21 from "../../assets/navbar/png021.png";
-import Image22 from "../../assets/navbar/png022.png";
-import Image23 from "../../assets/navbar/png023.png";
-import Image24 from "../../assets/navbar/png024.png";
-import Image25 from "../../assets/navbar/png025.png";
-import Image26 from "../../assets/navbar/png026.png";
-import Image27 from "../../assets/navbar/png027.png";
-import Image28 from "../../assets/navbar/png028.png";
-import Image29 from "../../assets/navbar/png029.png";
-import Image30 from "../../assets/navbar/png030.png";
-import Image31 from "../../assets/navbar/png031.png";
-import Image32 from "../../assets/navbar/png032.png";
-import Image33 from "../../assets/navbar/png033.png";
-import Image34 from "../../assets/navbar/png034.png";
-import Image35 from "../../assets/navbar/png035.png";
-import Image36 from "../../assets/navbar/png036.png";
-import Image37 from "../../assets/navbar/png037.png";
-import Image38 from "../../assets/navbar/png038.png";
-import Image39 from "../../assets/navbar/png039.png";
-import Image40 from "../../assets/navbar/png040.png";
-import Image41 from "../../assets/navbar/png041.png";
-import Image42 from "../../assets/navbar/png042.png";
-import Image43 from "../../assets/navbar/png043.png";
-import Image44 from "../../assets/navbar/png044.png";
-import Image45 from "../../assets/navbar/png045.png";
-import Image46 from "../../assets/navbar/png046.png";
-import Image47 from "../../assets/navbar/png047.png";
-import Image48 from "../../assets/navbar/png048.png";
-import Image49 from "../../assets/navbar/png049.png";
-import Image50 from "../../assets/navbar/png050.png";
-import Image51 from "../../assets/navbar/png051.png";
-import Image52 from "../../assets/navbar/png52.png";
-import Image53 from "../../assets/navbar/png53.png";
-import Image54 from "../../assets/navbar/png54.png";
-import Image55 from "../../assets/navbar/png55.png";
-import Image56 from "../../assets/navbar/png56.png";
-import Image57 from "../../assets/navbar/png57.png";
-import Image58 from "../../assets/navbar/png58.png";
-import Image59 from "../../assets/navbar/png59.png";
-import Image60 from "../../assets/navbar/png60.png";
+import Image1 from "../../assets/navbar/p1.png";
+import Image2 from "../../assets/navbar/p2.png";
+import Image3 from "../../assets/navbar/p3.png";
+import Image4 from "../../assets/navbar/p4.png";
+import Image5 from "../../assets/navbar/p5.png";
+import Image6 from "../../assets/navbar/p6.png";
+import Image7 from "../../assets/navbar/p7.png";
+import Image8 from "../../assets/navbar/p8.png";
+import Image9 from "../../assets/navbar/p9.png";
+import Image10 from "../../assets/navbar/p10.png";
+import Image11 from "../../assets/navbar/p11.png";
+import Image12 from "../../assets/navbar/p12.png";
+import Image13 from "../../assets/navbar/p13.png";
+import Image14 from "../../assets/navbar/p14.png";
+import Image15 from "../../assets/navbar/p15.png";
+import Image16 from "../../assets/navbar/p16.png";
+import Image17 from "../../assets/navbar/p17.png";
+import Image18 from "../../assets/navbar/p18.png";
+import Image19 from "../../assets/navbar/p19.png";
+import Image20 from "../../assets/navbar/p20.png";
+import Image21 from "../../assets/navbar/p21.png";
+import Image22 from "../../assets/navbar/p22.png";
+import Image23 from "../../assets/navbar/p23.png";
+import Image24 from "../../assets/navbar/p24.png";
+import Image25 from "../../assets/navbar/p25.png";
+import Image26 from "../../assets/navbar/p26.png";
+import Image27 from "../../assets/navbar/p27.png";
+import Image28 from "../../assets/navbar/p28.png";
+import Image29 from "../../assets/navbar/p29.png";
+import Image30 from "../../assets/navbar/p30.png";
+import Image31 from "../../assets/navbar/p31.png";
+import Image32 from "../../assets/navbar/p32.png";
+import Image33 from "../../assets/navbar/p33.png";
+import Image34 from "../../assets/navbar/p34.png";
+import Image35 from "../../assets/navbar/p35.png";
+import Image36 from "../../assets/navbar/p36.png";
+import Image37 from "../../assets/navbar/p37.png";
+import Image38 from "../../assets/navbar/p38.png";
+import Image39 from "../../assets/navbar/p39.png";
+import Image40 from "../../assets/navbar/p40.png";
+import Image41 from "../../assets/navbar/p41.png";
+import Image42 from "../../assets/navbar/p42.png";
+import Image43 from "../../assets/navbar/p43.png";
+import Image44 from "../../assets/navbar/p44.png";
+import Image45 from "../../assets/navbar/p45.png";
+import Image46 from "../../assets/navbar/p46.png";
+import Image47 from "../../assets/navbar/p47.png";
+import Image48 from "../../assets/navbar/p48.png";
+import Image49 from "../../assets/navbar/p49.png";
+import Image50 from "../../assets/navbar/p50.png";
+import Image51 from "../../assets/navbar/p51.png";
+import Image52 from "../../assets/navbar/p52.png";
+import Image53 from "../../assets/navbar/p53.png";
+import Image54 from "../../assets/navbar/p54.png";
+import Image55 from "../../assets/navbar/p55.png";
+import Image56 from "../../assets/navbar/p56.png";
+import Image57 from "../../assets/navbar/p57.png";
+import Image58 from "../../assets/navbar/p58.png";
+import Image59 from "../../assets/navbar/p59.png";
+import Image60 from "../../assets/navbar/p60.png";
 export const list = [
   { itemId: 1, title: "all", name: "all" },
   { itemId: 2, title: "men", name: "men" },
   { itemId: 3, title: "women", name: "women" },
   { itemId: 4, title: "kids", name: "kids" },
 ];
- const men = [
+export const men = [
   {
     id: 1,
     name: "Nike Cosmic Unity 2",
@@ -188,7 +188,7 @@ export const list = [
     price: 86,
   },
 ]
-const women=[ 
+export const women=[ 
   {
     id: 21,
     name: "Nike Lebron X John Elliott",
@@ -311,7 +311,7 @@ const women=[
   },
 ]
 
-const kids=[ 
+export const kids=[ 
   {
     id: 41,
     name: "Nike Dunk Ambush ",

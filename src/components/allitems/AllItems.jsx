@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { list, all } from "./AllItemsData";
+import { men, all,kids,women } from "./AllItemsData";
 
 const AllItems = ({items}) => {
 // //   const [toggle, showMenu] = useState(false);
@@ -92,25 +92,26 @@ const handleCategoryClick = (category) => {
   const filteredItems = selectedCategory === all ? all.items : all.filter(item => item.category === selectedCategory);
 
   return (
-    <div className="menu__items">
+    <div className="menu">
       <div className="menu__list">
         {/* <label className="category">Select Category:</label>      */}
-        <button className="but" onClick={() => handleCategoryClick('all')}>All</button>
-        <button className="but" onClick={() => handleCategoryClick('men')}>Men</button>
-        <button className="but" onClick={() => handleCategoryClick('women')}>Women</button>
-        <button className="but" onClick={() => handleCategoryClick('kids')}>Kids</button>
+        <button className="but" onClick={() => handleCategoryClick(all)}>All</button>
+        <button className="but" onClick={() => handleCategoryClick(men)}>Men</button>
+        <button className="but" onClick={() => handleCategoryClick(women)}>Women</button>
+        <button className="but" onClick={() => handleCategoryClick(kids)}>Kids</button>
+
       </div>
-      <ul className="nav__list">
-        {filteredItems && all.map((item) => { 
-            const { id, name, image, price,category } = item;
-            return( 
-          <li className="menu__item" key={category+id}>
-             <img className="menu__image"src={image} alt="icon" />
+      <nav className="menu__content">     
+       <ul className="menu__items">
+        {selectedCategory.map(({ id, name, image, price,category }) =>  ( 
+          <li className="menu__item" key={id}>
+             <img className="menu__image"style={{backgroundColor:"black"}}src={image} alt="icon" />
              <h3 className="menu__title">{price}</h3>
               <h3 className="menu__title">{name}</h3>
           </li>)
-        })}
-      </ul>
+        )}
+      </ul></nav>
+
     </div>
   );
 };
