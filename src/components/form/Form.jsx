@@ -20,8 +20,8 @@ const Form = () => {
   };
 
   return (
-    <section className="form container section">
-      <form className='form__content' onSubmit={handleSubmit}>
+    <section className="form container section hidden" id="form">
+      <form className='form__content'  onSubmit={handleSubmit}>
         <div className='form__info'>
           <label className="name">Enter your name:</label>
           <input className='form__input'

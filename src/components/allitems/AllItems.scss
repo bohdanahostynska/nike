@@ -1,12 +1,18 @@
-.nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  height: 100px;
-  padding: 40px;
-  position: relative;
-
+.menu {
+  &__content {
+    height: 6000px;
+    width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px;
+    position: absolute;
+    top: 54pxpx;
+    z-index: 3000;
+    scroll-behavior: smooth;
+    background-color: black;
+  }
   .aside {
     position: fixed;
     top: 0;
@@ -23,59 +29,39 @@
     transition: 0.3s;
   }
 
-  &__list {
+  &__items {
     display: grid;
     grid-template-columns: repeat(4, 15fr);
+    gap: 40px;
   }
-  &__menu {
+
+  &__item {
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
   }
-  &__link {
-    font-size: 1.5rem;
-    color: var(--title-color);
-    font-weight: var(--font-bold);
-    transition: 0.3s;
-  }
-  &__li {
-    max-width: 300px;
-    background-color: aqua;
-    color: black;
-  }
+
   .but {
     margin-right: 30px;
   }
-  .menu__list {
+  &__list {
     display: flex;
     gap: 100px;
     justify-content: space-around;
-  }
-  .menu {
-    display: grid;
-    grid-template-columns: repeat(4, 4fr);
-    position: absolute;
-    z-index: 30;
-    top: 0;
-    left: 0;
-  }
-  .menu__price {
-    color: white;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
   }
 
-  .menu__image {
-    width: 100px;
-    height: 70px;
-    background-color: black;
+  &__image {
+    width: 150px;
+    background-color: transparent;
   }
 
-  .menu__item {
-    width: 200px;
-    height: 100px;
-  }
   &__title {
-    font-size: 24px;
-    color: rgb(24, 102, 170);
+    font-size: 18px;
+    color: white;
   }
 
   &__link:hover {
@@ -96,6 +82,21 @@
     align-items: center;
     z-index: 1;
     transition: 0.3s;
+  }
+  .btn {
+    width: 100px;
+    height: 50px;
+  }
+  .but {
+    background-color: rgb(28, 27, 27);
+    color: bisque;
+    font-weight: 900;
+    padding: 20px 30px;
+    width: 200px;
+    border-radius: 100px;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    box-shadow: 10px 10px 5px #888888;
   }
 }
 

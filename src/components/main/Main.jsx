@@ -11,6 +11,7 @@ import Form from "../form/Form";
 
 
 
+
 const Main = () => {
   const [cart,setCart]=useState([])
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -20,9 +21,10 @@ const Main = () => {
     setIsFormOpen(!isFormOpen);
   };
 
-  const toggleCart = () => {
+  const toggleCart= () => {
     setIsCartOpen(!isCartOpen);
   };
+
 
   const addItemToCart = (product) => {
     setCart([...cart, product]);
