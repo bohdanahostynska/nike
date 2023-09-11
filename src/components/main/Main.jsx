@@ -103,7 +103,7 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="main__top">
+      <div className="main__top container section">
         <div className="main__top__left">
           <img src={Image1} alt="main" className="main__image" />
         </div>
@@ -129,7 +129,7 @@ const Main = () => {
       </div>
 
       <Swiper
-        className="main__bottom "
+        className="main__bottom container section "
         modules={[Navigation]}
         spaceBetween={0}
         slidesPerView={1}
@@ -224,7 +224,7 @@ const Main = () => {
         </div>
       )}
 
-      <div className="main__background">
+      <div className="main__background container section ">
         <img src={Labels} alt="" />
       </div>
     </section>

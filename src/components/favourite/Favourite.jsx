@@ -49,19 +49,77 @@ const Favourite = () => {
            </div>
           </div>
         </div>
-
-        <div className="favourite__bottom">
-          
-        <img src={Logo1} alt="" className="favourite__icon" />
-        <img src={Logo2} alt="" className="favourite__icon" />
-        <img src={Logo3} alt="" className="favourite__icon" />       
-        <img src={Logo4} alt="" className="favourite__icon" />        
-        <img src={Logo5} alt="" className="favourite__icon" />
-        <img src={Logo6} alt="" className="favourite__icon" />
-        <img src={Logo7} alt="" className="favourite__icon" />
-        <img src={Logo8} alt="" className="favourite__icon" />
-
-        </div>
+        <div d="favourite__bottom">
+          <div id="favourite__slider">
+            <div class="slider container">
+                <div class="slide-track">
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo1} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo2} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo3} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo4} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo5} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo6} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo7} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo8} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo1} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo2} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo3} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo4} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo5} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo6} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo7} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo8} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo1} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo2} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo3} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo4} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo5} alt="" className="favourite__icon" />
+                    </div>
+                </div>
+            </div>
+      </div>
+      </div>
       </div>
       </div>
     

@@ -133,11 +133,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer__bottom">
+        <div className="footer__bottom container section">
           <div className="footer__bottom__left">
+          <img src={logo} alt="" className="footer__left__img" />
             <p className="footer__bottom__text">2022 Nike, Inc. All Rights Reserved
 </p>
-<img src={logo} alt="" className="footer__left__img" />
+
           </div>
           <div className="footer__bottom__right">
           <i className="fa-brands fa-youtube"id="youtube" style={{color:"white"}}></i>

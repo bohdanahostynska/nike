@@ -67,6 +67,11 @@
   &__bottom__left {
     display: flex;
     gap: 10px;
+    width: 300px;
+    align-items: center;
+  }
+  &__left__img {
+    max-width: 20px;
   }
 
   &__bottom__right {
@@ -157,6 +162,7 @@
     &__bottom__right {
       margin: 0 auto;
       display: flex;
+      flex-wrap: wrap;
     }
   }
 }

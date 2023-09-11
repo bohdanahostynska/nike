@@ -1,18 +1,20 @@
 .main{
-
-  background-image: url(../src/assets/main/Image.png) ;
-  background-repeat: no-repeat;
-  padding-bottom: 0;
+  padding: 50px 40px;
   padding-left: 0;
   padding-right: 0;
- 
-
-  
-    background-repeat: no-repeat;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 @media screen and (max-width:1024px) {
   .main{
     margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width:576px) {
+  .main{
+padding-right: 0;
+margin-right: 0;
   }
 }
