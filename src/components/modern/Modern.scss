@@ -8,19 +8,21 @@
     width: 60%;
     position: relative;
     margin: 0 auto;
+    padding: 20px;
   }
 
   &__img1 {
     display: block;
-    max-width: 457px;
+    max-width: 300px;
     z-index: 6;
+    position: relative;
   }
 
   &__img2 {
     position: absolute;
-    max-width: 320px;
+    max-width: 300px;
     left: 10%;
-    bottom: 30%;
+    bottom: 50%;
     z-index: 7;
   }
 
@@ -34,7 +36,7 @@
   &__case {
     opacity: 0.1;
     position: absolute;
-    width: 260px;
+    width: 200px;
     height: 260px;
     left: 10%;
     bottom: 20%;
@@ -63,24 +65,30 @@
 
 @media screen and (max-width: 1024px) {
   .modern {
-    &__img2 {
-      bottom: 40%;
-    }
-
     &__title {
       font-size: 48px;
     }
   }
 }
+@media screen and (max-width: 986px) {
+  .modern {
+    &__block {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 70px;
+    }
 
+    &__img2 {
+      bottom: 30%;
+      left: 10%;
+    }
+  }
+}
 @media screen and (max-width: 856px) {
   .modern {
     &__block {
       display: flex;
       flex-direction: column-reverse;
-    }
-    &__img2 {
-      bottom: 50%;
     }
 
     .btn {
@@ -108,10 +116,13 @@
     }
 
     &__img2 {
-      bottom: 30%;
+      max-width: 200px;
+    }
+    &__img1 {
+      max-width: 200px;
     }
     &__left {
-      width: 50%;
+      width: 60%;
     }
   }
 }
@@ -122,8 +133,11 @@
       font-size: 32px;
       text-align: center;
     }
-    &__left {
-      width: 40%;
+    &__img2 {
+      max-width: 170px;
+    }
+    &__img1 {
+      max-width: 180px;
     }
   }
 }

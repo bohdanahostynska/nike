@@ -184,4 +184,12 @@
 }
 
 @media screen and (max-width: 460px) {
+  .footer {
+    &__bottom__left {
+      display: flex;
+      gap: 10px;
+      width: 250px;
+      align-items: center;
+    }
+  }
 }

@@ -45,7 +45,7 @@
   .but {
     margin-right: 30px;
   }
-  &__list {
+  .menu__list {
     display: flex;
     justify-content: space-around;
     padding-top: 10px;
@@ -100,16 +100,7 @@
     box-shadow: 10px 10px 5px #888888;
   }
   .ham__list {
-    position: absolute;
-    width: 200px;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    top: 16%;
-    left: 0;
-    z-index: 3002;
-    background-color: rgb(28, 27, 27);
+    display: none;
   }
 }
 
@@ -142,77 +133,122 @@
   }
 }
 @media screen and (max-width: 986px) {
-  .menu__items {
-    grid-template-columns: repeat(2, 30fr);
-  }
+  .menu {
+    .menu__items {
+      grid-template-columns: repeat(2, 30fr);
+    }
 
-  .menu__title {
-    max-width: 200px;
-  }
+    .menu__title {
+      max-width: 200px;
+    }
 
-  .menu__content {
-    height: 10300px;
-  }
+    .menu__content {
+      height: 10300px;
+    }
 
-  .menu__list {
-    display: none;
-  }
-  .ham {
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    transition: transform 200ms;
-    user-select: none;
-  }
-  .ham.active {
-    transform: rotate(45deg);
-  }
-  .ham .line {
-    fill: none;
-    transition: stroke-dasharray 200ms, stroke-dashoffset 200ms;
-    stroke: #706f6f;
-    stroke-width: 3.5;
-    stroke-linecap: round;
-  }
-  .ham .top {
-    stroke-dasharray: 40 160;
-  }
-  .ham .middle {
-    stroke-dasharray: 40 142;
-    transform-origin: 50%;
-    transition: transform 200ms;
-  }
-  .ham .bottom {
-    stroke-dasharray: 40 85;
-    transform-origin: 50%;
-    transition: transform 200ms, stroke-dashoffset 200ms;
-  }
-  .ham.active .top {
-    stroke-dashoffset: -64px;
-  }
-  .ham.active .middle {
-    transform: rotate(90deg);
-  }
-  .ham.active .bottom {
-    stroke-dashoffset: -64px;
-  }
-  .ham__list {
-    position: absolute;
-    // opacity: 0.8;
-    top: 1%;
-    left: 10%;
-    z-index: 356;
-    padding: 10px 10px;
-  }
-  .ham__title {
-    background-color: transparent;
-    color: white;
+    .menu__list {
+      display: none;
+    }
+    .ham__list {
+      position: fixed;
+      width: 180px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      top: 20%;
+      left: 18%;
+      z-index: 3002;
+      background-color: rgb(28, 27, 27);
+      transition: all 0.3s ease;
+      transform: translateX(-100%);
+      opacity: 0.9;
+    }
 
-    margin-top: 20px;
+    .ham {
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: transform 200ms;
+      user-select: none;
+    }
+    .ham.active {
+      transform: rotate(45deg);
+    }
+    .ham .line {
+      fill: none;
+      transition: stroke-dasharray 200ms, stroke-dashoffset 200ms;
+      stroke: #706f6f;
+      stroke-width: 3.5;
+      stroke-linecap: round;
+    }
+    .ham .top {
+      stroke-dasharray: 40 160;
+    }
+    .ham .middle {
+      stroke-dasharray: 40 142;
+      transform-origin: 50%;
+      transition: transform 200ms;
+    }
+    .ham .bottom {
+      stroke-dasharray: 40 85;
+      transform-origin: 50%;
+      transition: transform 200ms, stroke-dashoffset 200ms;
+    }
+    .ham.active .top {
+      stroke-dashoffset: -64px;
+    }
+    .ham.active .middle {
+      transform: rotate(90deg);
+    }
+    .ham.active .bottom {
+      stroke-dashoffset: -64px;
+    }
+
+    .ham__title {
+      background-color: transparent;
+      color: white;
+
+      margin-top: 20px;
+    }
   }
 }
 
+@media screen and (max-width: 856px) {
+  .menu {
+    .ham__list {
+      left: 22%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    .ham__list {
+      left: 25%;
+    }
+  }
+}
 @media screen and (max-width: 576px) {
-  .menu__items {
-    grid-template-columns: repeat(1, 60fr);
+  .menu {
+    .menu__items {
+      grid-template-columns: repeat(1, 60fr);
+    }
+    .ham__list {
+      left: 29%;
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .menu {
+    .ham__list {
+      left: 40%;
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  .menu {
+    .ham__list {
+      left: 42%;
+    }
   }
 }
