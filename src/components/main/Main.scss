@@ -265,6 +265,8 @@
     right: 0;
     overflow: hidden;
     z-index: 19;
+    max-width: 40%;
+    opacity: 0.9;
   }
   &__content {
     padding: 30px;
@@ -277,6 +279,7 @@
     right: 0;
     z-index: 20;
     overflow-y: auto;
+    max-width: 40%;
   }
 
   &__cart__top {

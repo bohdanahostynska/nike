@@ -42,7 +42,7 @@ const handleClicks=()=>{
         <button className="but" onClick={() => handleCategoryClick(kids)}>Kids</button>
       </div>
       {isHidden ? null : 
-       <nav className="menu__content" id='menu' role="button">  
+       <nav className="menu__content container section" id='menu' role="button">  
        <div className="menu__items">
         {selectedCategory.map(({ id, name, image, price,category }) =>  ( 
           <li className="menu__item" key={id}>

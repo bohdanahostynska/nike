@@ -116,13 +116,21 @@ const Favourite = () => {
                     <div class="slide d-flex justify-content-center align-items-center">
                     <img src={Logo5} alt="" className="favourite__icon" />
                     </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo6} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo7} alt="" className="favourite__icon" />
+                    </div>
+                    <div class="slide d-flex justify-content-center align-items-center">
+                    <img src={Logo8} alt="" className="favourite__icon" />
                 </div>
             </div>
       </div>
       </div>
       </div>
       </div>
-    
+      </div>
   )
 }
 
