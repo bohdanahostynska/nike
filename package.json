@@ -1,7 +1,7 @@
 {
   "name": "nike",
   "version": "0.1.0",
-  "homepage": "https://bohdanahostynska.github.io/nike",
+  "homepage": "https://github.com/bohdanahostynska/nike",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
