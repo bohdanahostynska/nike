@@ -190,9 +190,10 @@ const Main = () => {
                     <br/>
                 <br/>
                     <div className="main__cart__bottom">
-                    <span className="main__cart__title">
+                    <div className="main__cart__title">
                         ${calculateProductPrice(item.product)}
-                      </span>
+                      </div>
+                      <div className="main__cart__bottom_right">
 
                     <button
                       className="main__cart__button"
@@ -201,7 +202,7 @@ const Main = () => {
                       -
                     </button>
 
-                    <span className="main__cart__number"> {item.quantity}</span>
+                    <div className="main__cart__number"> {item.quantity}</div>
                     <button
                       className="main__cart__button"
                       onClick={() => addItemToCart(item.product)}
@@ -209,13 +210,14 @@ const Main = () => {
                       +
                     </button>
                     </div>
+                    </div>
                   </li>
                 ))}
               </ul>
               <div>
                 <br/>
                 <br/>
-                <span className="main__cart__title">
+                <span className="main__cart__total">
                   Total Price: ${calculateTotalPrice(products)}
                 </span>
               </div>

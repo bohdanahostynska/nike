@@ -15,7 +15,7 @@ import Logo8 from "../../assets/fav/nb3.png";
 
 const Favourite = () => {
   return (
-    <div className='favourite container section'>
+    <div className='favourite'>
       <div className="favourite__info">
         <div className="favourite__top">
           <div className="favourite__titles">
@@ -51,7 +51,7 @@ const Favourite = () => {
         </div>
         <div d="favourite__bottom">
           <div id="favourite__slider">
-            <div class="slider container">
+            <div class="slider">
                 <div class="slide-track">
                     <div class="slide d-flex justify-content-center align-items-center">
                     <img src={Logo1} alt="" className="favourite__icon" />
