@@ -1,7 +1,7 @@
 {
   "name": "nike",
   "version": "0.1.0",
-  "homepage": "https://github.com/bohdanahostynska/nike",
+  "homepage": "https://bohdanahostynska.github.io/nike",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
+     "deploy": "gh-pages -d build"
     
   },
   "eslintConfig": {
